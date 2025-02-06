@@ -26,6 +26,13 @@ A multi-language implementation of Project Euler problems with design pattern in
 
 *To be updated* ...
 
+## Commit Message Convention
+````
+<type>(problem-<ID>/<lang>): <imperative description> [pattern: <PatternName>]
+
+<body: why + how>
+[optional footer]
+````
 ## 🌐 Language Learning Pathways
 
 | Learning Focus       | Language Pair      | Key Synergies                                                                                          | Verified Sources                                                                 |
