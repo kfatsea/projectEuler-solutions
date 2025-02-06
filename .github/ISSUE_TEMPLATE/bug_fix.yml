@@ -1,0 +1,60 @@
+name: "🐛 Bug Fix"
+description: "Report and track implementation bugs"
+title: "🐛 [BUG] Problem-<number> - <brief description>"
+labels: [
+  "bug",
+  "fix"
+]
+body:
+  - type: input
+    id: problem-number
+    attributes:
+      label: "Problem Number"
+      description: "Project Euler problem number (3 digits)"
+      placeholder: "001"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component-type
+    attributes:
+      label: "Component Type"
+      options:
+        - Pattern Implementation
+        - Algorithm Logic
+        - Test Cases
+        - Performance Issue
+        - Language-Specific Bug
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: "Current Behavior"
+      description: "What is happening?"
+      placeholder: "Describe the bug..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "Expected Behavior"
+      description: "What should happen?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: "Steps to Reproduce"
+      value: |
+        1. Go to '...'
+        2. Execute '...'
+        3. See error
+      render: markdown
+    validations:
+      required: true
+
+### **Documentation Template**
