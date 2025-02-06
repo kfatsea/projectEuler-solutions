@@ -1,7 +1,7 @@
 # Project Euler Solutions & Design Patterns
 
 [![Python](https://img.shields.io/badge/Python-3.13%2B-blue)](https://python.org)
-[![Java](https://img.shields.io/badge/Java-17%2BunsureofVersion-orange)](https://java.com)
+[![Java](https://img.shields.io/badge/Java-17%2B-orange)](https://java.com)
 [![Project Euler](https://img.shields.io/badge/Project_Euler-Problems-blueviolet)](https://projecteuler.net)
 
 A multi-language implementation of Project Euler problems with design pattern integration. 
