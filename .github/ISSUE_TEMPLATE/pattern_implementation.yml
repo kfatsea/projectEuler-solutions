@@ -1,0 +1,71 @@
+# pattern_implementation.yml
+name: Pattern Implementation
+about: Implement a design pattern for a specific problem
+title: 'pattern(p000): implement [Pattern] for [Problem Description]'
+labels: ['pattern', 'enhancement']
+assignees: ''
+
+body:
+- type: markdown
+  attributes:
+    value: |
+      ## Pattern Implementation Details
+
+- type: input
+  id: problem-number
+  attributes:
+    label: Problem Number
+    description: 'Project Euler problem number (3 digits)'
+    placeholder: '001'
+  validations:
+    required: true
+
+- type: dropdown
+  id: pattern-type
+  attributes:
+    label: Design Pattern
+    options:
+      - Strategy
+      - Iterator
+      - Observer
+      - Factory Method
+      - Template Method
+      - Command
+      - Decorator
+  validations:
+    required: true
+
+- type: dropdown
+  id: implementation-language
+  attributes:
+    label: Primary Implementation Language
+    description: 'Initial implementation language'
+    options:
+      - Python
+      - Java
+      - Rust
+      - Haskell
+      - Clojure
+      - C++
+  validations:
+    required: true
+
+- type: textarea
+  id: pattern-justification
+  attributes:
+    label: Pattern Justification
+    description: 'Why this pattern fits the problem'
+    placeholder: 'This pattern is suitable because...'
+  validations:
+    required: true
+
+- type: textarea
+  id: implementation-plan
+  attributes:
+    label: Implementation Plan
+    description: 'Key components and steps'
+    value: |
+      1. Create pattern interface/abstract class
+      2. Implement concrete classes
+      3. Add tests
+      4. Document pattern usage
