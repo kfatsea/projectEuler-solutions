@@ -1,0 +1,88 @@
+name: "🚀 Initial Solution"
+description: "Template for first implementation of Euler problem"
+title: "🚀 [INITIAL SOLUTION] - Problem-<number>"
+labels: [
+  "initial-solution",
+  "no-pattern"
+]
+body:
+  - type: input
+    id: problem-number
+    attributes:
+      label: "Problem Number"
+      description: "Project Euler problem number (3 digits)"
+      placeholder: "001"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: "Problem Description"
+      description: "Brief description of the Project Euler problem"
+      placeholder: "Copy the problem statement here..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: implementation-language
+    attributes:
+      label: "Implementation Language"
+      description: "Select the language for initial solution"
+      options:
+        - Python
+        - Java
+        - Rust
+        - Haskell
+        - Clojure
+        - C++
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution-approach
+    attributes:
+      label: "Solution Approach"
+      description: "Describe your planned approach to solve the problem"
+      value: |
+        1. Mathematical analysis
+        2. Algorithm outline
+        3. Implementation steps
+        4. Testing strategy
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: potential-patterns
+    attributes:
+      label: "Potential Patterns"
+      description: "Note any design patterns that might be suitable for future refactoring"
+      placeholder: "List patterns that could be applied later..."
+      render: markdown
+    validations:
+      required: false
+
+  - type: textarea
+    id: performance-considerations
+    attributes:
+      label: "Performance Considerations"
+      description: "Any initial thoughts on performance optimization"
+      placeholder: "Time complexity, space complexity, optimization opportunities..."
+      render: markdown
+    validations:
+      required: false
+
+  - type: dropdown
+    id: difficulty-estimate
+    attributes:
+      label: "Difficulty Estimate"
+      description: "Estimated difficulty of the problem"
+      options:
+        - Easy (5%)
+        - Medium (25%)
+        - Hard (50%)
+        - Very Hard (75%)
+        - Challenging (95%)
+    validations:
+      required: true
