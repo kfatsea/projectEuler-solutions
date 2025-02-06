@@ -1,0 +1,54 @@
+name: "🐍 Python Pattern Implementation"
+description: "Template for implementing the first pattern solution in Python"
+title: "🐍 [PATTERN] Problem-<number> Python Implementation"
+labels: [
+  "pattern",
+  "python",
+  "implementation"
+]
+body:
+  - type: input
+    id: problem-number
+    attributes:
+      label: "Problem Number"
+      description: "Project Euler problem number (3 digits)"
+      placeholder: "001"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pattern-type
+    attributes:
+      label: "Selected Pattern"
+      description: "Pattern chosen for implementation"
+      options:
+        - Strategy
+        - Iterator
+        - Template Method
+        - Observer
+        - Factory Method
+        - Command
+    validations:
+      required: true
+
+  - type: textarea
+    id: pattern-rationale
+    attributes:
+      label: "Pattern Selection Rationale"
+      description: "Why this pattern was chosen for the problem"
+      placeholder: "This pattern fits because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-plan
+    attributes:
+      label: "Implementation Steps"
+      value: |
+        1. Pattern structure
+        2. Class hierarchy
+        3. Test cases
+        4. Performance considerations
+      render: markdown
+    validations:
+      required: true
