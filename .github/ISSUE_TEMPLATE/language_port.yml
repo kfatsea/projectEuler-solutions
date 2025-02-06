@@ -1,0 +1,38 @@
+name: "🔄 Pattern Port"
+description: "Template for porting Python pattern solution to another language"
+title: "🔄 [LANG] Problem-<number> Pattern Port"
+labels: [
+  "pattern-port",
+  "implementation"
+]
+body:
+  - type: dropdown
+    id: target-language
+    attributes:
+      label: "Target Language"
+      options:
+        - Java
+        - Rust
+        - Haskell
+        - Clojure
+        - C++
+    validations:
+      required: true
+
+  - type: textarea
+    id: language-specifics
+    attributes:
+      label: "Language-Specific Considerations"
+      description: "How the pattern will be adapted to target language features"
+      placeholder: "Using traits in Rust..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-changes
+    attributes:
+      label: "Required Adaptations"
+      description: "Changes needed from Python implementation"
+      render: markdown
+    validations:
+      required: true
