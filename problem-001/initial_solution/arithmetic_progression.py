@@ -38,7 +38,7 @@ def sum_multiples(n):
     Returns:
     int: Sum of all multiples of 3 or 5 below n. 
     """
-    # Calculate the number of multiples for 3, 5, and 15 below n
+    # Calculate the number of multiples for 3, 5, and 15 below n.
     # This approach is used to calculate the number of terms in a
     # sequence or progression WITHOUT using loops.
     # We use (n - 1) to exclude n itself from the calculation.
