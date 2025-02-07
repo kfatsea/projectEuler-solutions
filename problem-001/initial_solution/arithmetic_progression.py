@@ -24,8 +24,9 @@ def arithmetic_sum(count, d):
     Returns:
     int: Sum of the arithmetic sequence.
     """
-    return count * (count + 1) // 2 * d     # Use // for integer division to ensure the result is always an integer
 
+    # Use // for integer division to ensure the result is always an integer
+    return count * (count + 1) // 2 * d
 
 def sum_multiples(n):
     """
@@ -38,8 +39,9 @@ def sum_multiples(n):
     int: Sum of all multiples of 3 or 5 below n. 
     """
     # Calculate the number of multiples for 3, 5, and 15 below n
-    # This approach is used to calculate the number of terms in a sequence or progression WITHOUT using loops
-    # We use (n - 1) to exclude n itself from the calculation
+    # This approach is used to calculate the number of terms in a
+    # sequence or progression WITHOUT using loops.
+    # We use (n - 1) to exclude n itself from the calculation.
     mult3 = (n - 1) // 3
     mult5 = (n - 1) // 5
     mult15 = (n - 1) // 15
@@ -70,7 +72,8 @@ def main():
         return result, n
     except ValueError as e:
         print(f"Invalid Input: {e}")
-        return None, None # Maintains consistency, signals invalid input, and maintaind program flow. 
+        # Maintains consistency, signals invalid input, and maintaind program flow.
+        return None, None
 
 if __name__ == "__main__":
-    result, n = main()
+    sum_of_multiples, upper_bound = main()
