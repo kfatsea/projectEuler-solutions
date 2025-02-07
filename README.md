@@ -18,7 +18,7 @@ A multi-language implementation of Project Euler problems with design pattern in
   - **Clojure** (concurrency)
 
 ### Pattern Integration
-- Map each problem to 1-2 design patterns
+- Map certain problems to 1-2 design patterns
 - Document pattern applications in `/docs/patterns.md`
 - Create pattern cheat sheets per language
 
