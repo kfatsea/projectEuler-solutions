@@ -11,6 +11,8 @@ Output: The sum of all multiples of 3 and 5 below `n`
 3. Return sum
 '''
 
+# Good practice to seperate calculation logic into its own function. Helps with testing and maintenance.
+# Main function typically handles user input and output in Python. 
 def sum_multiples(n):
     total_sum = 0
     for i in range(1, n): #Iterates until n-1
