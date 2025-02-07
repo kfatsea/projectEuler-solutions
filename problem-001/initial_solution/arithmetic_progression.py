@@ -5,13 +5,14 @@ Date: 07/02/2025
 Arithmetic Sequence solution for problem-001 of Euler Project.
 
 Problem Statement:
-Find the sum of all multiples of 3 and 5 below a given number n. 
+Find the sum of all multiples of 3 and 5 below a given number n.
 
 The solutions include:
 1) Brute Force Iteration
-2) Efficient Iteration (Inclusion-Exclusion Set Theory) 
+2) Efficient Iteration (Inclusion-Exclusion Set Theory)
 3) Arithmetic Sequence <------
 """
+
 
 def arithmetic_sum(count, d):
     """
@@ -19,7 +20,7 @@ def arithmetic_sum(count, d):
 
     Args:
     count (int): Number of terms in the sequence.
-    d (int): Common difference between terms. 
+    d (int): Common difference between terms.
 
     Returns:
     int: Sum of the arithmetic sequence.
@@ -28,15 +29,16 @@ def arithmetic_sum(count, d):
     # Use // for integer division to ensure the result is always an integer
     return count * (count + 1) // 2 * d
 
+
 def sum_multiples(n):
     """
     Calculate the sum of multiples of 3 and 5 below n.
 
-    Args: 
+    Args:
     n (int): Upper limit (exclusive) for considering multiples.
 
     Returns:
-    int: Sum of all multiples of 3 or 5 below n. 
+    int: Sum of all multiples of 3 or 5 below n.
     """
     # Calculate the number of multiples for 3, 5, and 15 below n.
     # This approach is used to calculate the number of terms in a
@@ -55,11 +57,12 @@ def sum_multiples(n):
     total_sum = sum_mult3 + sum_mult5 - sum_mult15
     return total_sum
 
+
 def main():
     """
     Main function to handle user input and calculate the sum of multiples
 
-    Returns: 
+    Returns:
     tuple: A tuple containing the result and input number, or (None, None)
     if an error occurs.
     """
@@ -74,6 +77,7 @@ def main():
         print(f"Invalid Input: {e}")
         # Maintains consistency, signals invalid input, and maintaind program flow.
         return None, None
+
 
 if __name__ == "__main__":
     sum_of_multiples, upper_bound = main()
