@@ -11,6 +11,11 @@ The solutions include:
 1) Brute Force Iteration
 2) Efficient Iteration (Inclusion-Exclusion Set Theory) <------
 3) Arithmetic Sequence
+
+Efficient Iteration:
+Iterate through multiples of 3 and 5 below the given number n 
+and sum them while subtracting duplicate multiples of 15.
+
 """
 
 
