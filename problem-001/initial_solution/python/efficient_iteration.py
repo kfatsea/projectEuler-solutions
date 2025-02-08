@@ -13,8 +13,7 @@ def sum_multiples(n):
 
     Efficient Iteration:
     Iterate through multiples of 3 and 5 below the given number n
-    and sums them while subtracting duplicate multiples of 15.
-
+    and sums them avoiding double-counting multiples of 15.
     Args:
     n (int): Upper limit (exclusive) for considering multiples.
 
@@ -27,11 +26,10 @@ def sum_multiples(n):
         total_sum += i
         iterations += 1
     for i in range(0, n, 5):
-        total_sum += i
+        if i % 3 != 0:
+            total_sum += i
         iterations += 1
-    for i in range(0, n, 15):
-        total_sum -= i
-        iterations += 1
+    
     return total_sum
 
 
