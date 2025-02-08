@@ -8,8 +8,6 @@ below a given number n using efficient iteration in Java.
 
 import java.util.Scanner;                         
 
-
-
 public class EfficientIteration { // Class declaration: the class name should start with an uppercase letter by convention.
     
     public static void main(String[] args) { // Main method - Entry point of the program
@@ -60,5 +58,3 @@ public class EfficientIteration { // Class declaration: the class name should st
 
     } 
 }
- 
-
