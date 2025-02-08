@@ -2,26 +2,18 @@
 Author: Kona Fatsea
 Date: 07/02/2025
 
-Efficient Iteration (Inclusion - Exclusion) solution for problem-001 of Euler Project.
-
-Problem Statement:
-Find the sum of all multiples of 3 and 5 below a given number n.
-
-The solutions include:
-1) Brute Force Iteration
-2) Efficient Iteration (Inclusion-Exclusion Set Theory) <------
-3) Arithmetic Sequence
-
-Efficient Iteration:
-Iterate through multiples of 3 and 5 below the given number n 
-and sum them while subtracting duplicate multiples of 15.
-
+Solve problem-001 of Euler Project to find the sum of all multiples of 3 and 5
+below a given number n using efficient iteration in Python.
 """
 
 
 def sum_multiples(n):
     """
     Calculate the sum of multiples of 3 and 5 below n.
+
+    Efficient Iteration:
+    Iterate through multiples of 3 and 5 below the given number n
+    and sums them while subtracting duplicate multiples of 15.
 
     Args:
     n (int): Upper limit (exclusive) for considering multiples.
@@ -40,7 +32,6 @@ def sum_multiples(n):
     for i in range(0, n, 15):
         total_sum -= i
         iterations += 1
-    print(f"Number of Iterations: {iterations}")
     return total_sum
 
 
