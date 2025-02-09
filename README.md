@@ -1,4 +1,4 @@
-# Project Euler Solutions & Design Patterns
+# Project Euler Solutions & Patterns
 
 [![Python](https://img.shields.io/badge/Python-3.13%2B-blue)](https://python.org)
 [![Java](https://img.shields.io/badge/Java-17%2B-orange)](https://java.com)
