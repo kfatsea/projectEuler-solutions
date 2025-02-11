@@ -4,6 +4,8 @@ Date: 07/02/2025
 
 Solve problem-001 of Euler Project to find the sum of all multiples of 3 and 5
 below a given number n using efficient iteration in Java.
+
+Comments are kept for personal future reference
 */
 
 import java.util.Scanner;                         
