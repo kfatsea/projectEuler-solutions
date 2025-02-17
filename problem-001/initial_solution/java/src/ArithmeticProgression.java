@@ -6,6 +6,7 @@ Solve problem-001 of Euler Project to find sum of multiples of 3 or 5 below
 a given number n using the formula for the sum of an arithmetic series.  
 */ 
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ArithmeticProgression {
@@ -18,18 +19,26 @@ public class ArithmeticProgression {
      * @param args Command-line arguments (not used in this program).
      */
     public static void main (String[] args){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a positive integer: ");
-        int n = scanner.nextInt();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Enter a positive integer: ");
+            int n = scanner.nextInt();
 
-        if (n<=0){
-            System.out.println("Please enter a positive integer.");
-        } else {
-            long result = sumMultiples(n);
-            System.out.printf("The sum of multiples of 3 or 5 below %d is: %d\n", n, result);
+            if (n <= 0) {
+                throw new IllegalArgumentException("The number is not a positive integer.");
+            }
+            
+            System.out.println("You entered a positive integer: " + n);
+        	long result = sumMultiples(n);
+            System.out.printf("The sum of multiples of 3 or 5 below %d is: %d%n", n, result);
+
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter a valid positive integer.");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            System.out.println("An unexpected error occured: " + e.getMessage());
         }
-
-        scanner.close();
+       
     }
 
     /**
