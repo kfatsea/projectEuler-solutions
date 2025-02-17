@@ -53,14 +53,14 @@ public class ArithmeticProgression {
     }
     
     /**	
-     * Calculaes the sum of an arithmetic sequence.
+     * Calculates the sum of an arithmetic sequence.
      * 
      * @param count Number of terms in the sequence.
      * @param d Common difference between terms.
      * 
      * @return The sum of the arithmetic sequence.
      */
-    static long sumArithmeticSeries(long count, int d){
+    static long sumArithmeticSeries(long count, int d){ // @OverflowIssue: if `int`
         return count * (count + 1) / 2 * d;
     }
 
