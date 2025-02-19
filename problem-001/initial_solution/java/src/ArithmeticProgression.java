@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 public class ArithmeticProgression {
     // Create a Logger Instance
     private static final Logger logger = Logger.getLogger(ArithmeticProgression.class.getName());
+    // Define Constants
     private static final int MULTIPLE_3 = 3;
     private static final int MULTIPLE_5 = 5;
     private static final int MULTIPLE_15 = 15; // LCM of 3 and 5
@@ -28,6 +29,7 @@ public class ArithmeticProgression {
      */
     public static void main (String[] args){
         try (Scanner scanner = new Scanner(System.in)) {
+            logger.info("Prompting user for input.");
             System.out.println("Please enter a positive integer: ");
             int n = scanner.nextInt();
 
