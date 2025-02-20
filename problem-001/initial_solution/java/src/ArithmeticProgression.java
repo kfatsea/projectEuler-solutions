@@ -65,13 +65,14 @@ public class ArithmeticProgression {
 
         }
     }
-        /**
-         * Calculates the sum of multiples of 3 or 5 below a given number n.
-         * Uses the formula for the sum of an arithmetic progression.
-         *
-         * @param n The upper limit (exclusive) for the multiples.
-         * @return The sum of multiples of 3 or 5 below n.
-         */
+
+    /**
+     * Calculates the sum of multiples of 3 or 5 below a given number n. Uses
+     * the formula for the sum of an arithmetic progression.
+     *
+     * @param n The upper limit (exclusive) for the multiples.
+     * @return The sum of multiples of 3 or 5 below n.
+     */
     static long sumMultiples(int n) {
         long sum3 = sumArithmeticSeries((n - 1) / MULTIPLE_3, MULTIPLE_3);
         long sum5 = sumArithmeticSeries((n - 1) / MULTIPLE_5, MULTIPLE_5);
