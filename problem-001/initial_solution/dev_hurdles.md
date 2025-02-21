@@ -1,5 +1,5 @@
 # Developer Guide
-Challenges faced while solving the problems. 
+Challenges faced while working on the project.
 
 ## 1. Integer Overflow in Java vs. Python
 Java can experience integer overflow with large numbers, unlike Python. 
