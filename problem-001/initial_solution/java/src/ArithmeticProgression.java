@@ -6,14 +6,30 @@ Solve problem-001 of Euler Project to find sum of multiples of 3 or 5 below
 a given number n using the formula for the sum of an arithmetic series.  
  */
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.logging.Logger;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger; // NOT method of Logger - Separate class that you need to instantiate
+import java.util.logging.SimpleFormatter;
 
 public class ArithmeticProgression {
 
     // Create a Logger Instance
     private static final Logger logger = Logger.getLogger(ArithmeticProgression.class.getName());
+
+    // Create a file handler instance, set the formatter, and add the handler to the logger
+    static {
+        try {
+            FileHandler fileHandler = new FileHandler("ArithmeticProgression%u.log", true); // Throws an exception if the file cannot be created or opened
+            fileHandler.setFormatter(new SimpleFormatter()); // Default: XMLFormatter
+            logger.addHandler(fileHandler);
+            logger.setUseParentHandlers(false);
+        } catch (IOException e) {
+            logger.severe("Failed to initialize log file handler: " + e.getMessage());
+        }
+    }
+
     // Define Constants
     private static final int MULTIPLE_3 = 3;
     private static final int MULTIPLE_5 = 5;
