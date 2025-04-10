@@ -6,11 +6,11 @@ Solve problem-001 of Euler Project to find sum of multiples of 3 or 5 below
 a given number n using the formula for the sum of an arithmetic series.  
  */
 
-
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.logging.FileHandler;
+import java.util.logging.Level;
 import java.util.logging.Logger; // NOT method of Logger - Separate class that you need to instantiate
 import java.util.logging.SimpleFormatter;
 
@@ -20,14 +20,14 @@ public class ArithmeticProgression {
     private static final Logger logger = Logger.getLogger(ArithmeticProgression.class.getName());
 
     // Create a file handler instance, set the formatter, and add the handler to the logger
-    static { // TODO - Why in a static block and not inline?
-        try {  // TODO - Add a newline between logs? Is it necessary?
+    static { 
+        try {  // TODO - Direct log file to a logs folder
             FileHandler fileHandler = new FileHandler("ArithmeticProgression%u.log", true); // Throws an exception if the file cannot be created or opened
             fileHandler.setFormatter(new SimpleFormatter()); // Default: XMLFormatter
             logger.addHandler(fileHandler);
             logger.setUseParentHandlers(false);
         } catch (IOException e) {
-            logger.severe("Failed to initialize log file handler: " + e.getMessage()); // TODO - SonarQube ?
+            logger.log(Level.SEVERE, "Failed to initialize log file handler: {0}", e.getMessage()); // Parametrized messages preferred to string concatenation for efficiency
         }
     }
 
@@ -55,7 +55,7 @@ public class ArithmeticProgression {
                         throw new IllegalArgumentException("The number is not a positive integer.");
                     }
 
-                    logger.info("User entered a valid positive integer: " + n);
+                    logger.log(Level.INFO, "User entered a valid positive integer: {0}", n);
                     long result = sumMultiples(n);
                     System.out.printf("The sum of multiples of 3 or 5 below %d is: %d%n", n, result);
 
@@ -72,10 +72,10 @@ public class ArithmeticProgression {
                     System.out.println("Invalid input. Please enter a positive integer.");
                     scanner.nextLine(); // Clear the invalid input from the scanner (When nextInt() throws the exception, it doesn't consume the invalid input, and will read the same invalid input again)
                 } catch (IllegalArgumentException e) {
-                    logger.warning("Invalid Input: " + e.getMessage());
+                    logger.log(Level.WARNING, "Invalid Input: {0}", e.getMessage());
                     System.out.println("Error: " + e.getMessage());
                 } catch (Exception e) {
-                    logger.severe("An unexpected error occured: " + e.getMessage());
+                    logger.log(Level.SEVERE, "An unexpected error occured: {0}", e.getMessage());
                     System.out.println("An unexpected error ocurred. Please try again.");
                 }
             }
