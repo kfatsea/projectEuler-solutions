@@ -1,6 +1,3 @@
-// TODO - Update COMMIT_GUIDE (https://dev.to/noelworden/improving-your-commit-message-with-the-50-72-rule-3g79)
-
-
 # Project Euler Solutions & Patterns
 
 [![Python](https://img.shields.io/badge/Python-3.13%2B-blue)](https://python.org)
